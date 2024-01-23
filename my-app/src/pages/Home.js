@@ -8,7 +8,7 @@ import { AntDesign } from '@expo/vector-icons';
 
 export default function ({ navigation }) {
     return (
-        <>
+        <View style={{ flex: 1, position: 'absolute' }}>
 
             <View style={styles.nav}>
                 <TouchableOpacity>
@@ -122,7 +122,7 @@ export default function ({ navigation }) {
                         <View><Image style={styles.img} source={require('../img/Chair1.jpg')} /></View>
                         <View style={{ width: 230, paddingHorizontal: 20 }}>
                             <Text style={{ fontSize: 18, fontWeight: '600' }}> Magical Player</Text>
-                            <Text style={{ fontSize: 15, paddingLeft: 8, color: '#808080' }}>Color: Pink</Text>
+                            <Text style={{ fontSize: 15, paddingLeft: 8, color: '#808080' }}>Color: Gray</Text>
                             <View style={{ flexDirection: 'row', justifyContent: 'space-between', paddingLeft: 10, paddingTop: 10 }}>
                                 <Text style={{ fontWeight: '500' }}>$ 125.00</Text>
                                 <TouchableOpacity onPress={() => navigation.navigate('Detail')}><AntDesign style={{ height: 40, width: 40, backgroundColor: '#000', textAlign: 'center', paddingTop: 5, marginTop: -10, borderRadius: 10, }} name="arrowright" size={30} color="#fff" /></TouchableOpacity>
@@ -135,7 +135,7 @@ export default function ({ navigation }) {
                         <View><Image style={styles.img} source={require('../img/chair2.jpg')} /></View>
                         <View style={{ width: 230, paddingHorizontal: 20 }}>
                             <Text style={{ fontSize: 18, fontWeight: '600' }}> Magical Player</Text>
-                            <Text style={{ fontSize: 15, paddingLeft: 8, color: '#808080' }}>Color: Pink</Text>
+                            <Text style={{ fontSize: 15, paddingLeft: 8, color: '#808080' }}>Color: Brown</Text>
                             <View style={{ flexDirection: 'row', justifyContent: 'space-between', paddingLeft: 10, paddingTop: 10 }}>
                                 <Text style={{ fontWeight: '500' }}>$ 125.00</Text>
                                 <TouchableOpacity onPress={() => navigation.navigate('Detail')}><AntDesign style={{ height: 40, width: 40, backgroundColor: '#000', textAlign: 'center', paddingTop: 5, marginTop: -10, borderRadius: 10, }} name="arrowright" size={30} color="#fff" /></TouchableOpacity>
@@ -151,7 +151,7 @@ export default function ({ navigation }) {
 
             <StatusBar barStyle={'dark-content'} backgroundColor={'#f5f6fa'} />
 
-        </>
+        </View>
     )
 }
 const styles = StyleSheet.create({
@@ -171,7 +171,8 @@ const styles = StyleSheet.create({
         width: 40,
         textAlign: 'center',
         paddingTop: 5, borderRadius: 10,
-        marginTop: 20
+        marginTop: 20,
+        marginBottom: 50
 
     },
     search: {
@@ -180,7 +181,9 @@ const styles = StyleSheet.create({
         justifyContent: 'space-between',
         paddingHorizontal: 20,
         alignItems: 'center',
-        backgroundColor: '#f5f6fa'
+        backgroundColor: '#f5f6fa',
+        paddingBottom: 50
+
 
     },
     bar: {
@@ -213,7 +216,11 @@ const styles = StyleSheet.create({
     items: {
         flex: .3,
 
-        backgroundColor: '#f5f6fa'
+        backgroundColor: '#f5f6fa',
+        height: 350,
+        paddingTop: 20
+
+
     },
     rect: {
         marginTop: 30,
@@ -228,6 +235,7 @@ const styles = StyleSheet.create({
         paddingTop: 15,
         marginLeft: 10,
         marginRight: 10,
+
 
     },
     img: {

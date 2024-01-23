@@ -64,6 +64,7 @@ export default function Detail({ navigation }) {
             </View>
 
 
+
         </>
     )
 }
